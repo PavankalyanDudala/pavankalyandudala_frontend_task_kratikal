@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section styles */
+.top-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #16479b;
+    padding: 10px 0;
+}
+
+.us-flag-image {
+    height: 15px;
+    width: 20px;
+    margin-right: 8px;
+}
+
+.top-header .contact-number {
+    font-size: 14px;
+    color: white;
+}
+
+/* Navbar Section styles */
+
+.logo-image {
+    height: 40px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+}
+
+.navbar .nav-item .nav-link {
+    color: black;
+    padding: 10px 12px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #16479b;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: black;
+}
+
+.contact-us-button {
+    background-color: #16479b;
+    padding: 10px 8px;
+    flex-wrap: nowrap;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Upcoming event section styles */
+
+.colon {
+    position: relative;
+    top: -25px;
+    font-weight: 900;
+    color: #16479b;
+} 
+
+.countdown-container {
+    border-radius: 10px;
+}
+
+.countdown-item {
+    color: #16479b;
+}
+
+.upcoming-event-one-image {
+    width: auto;
+}
+
+.register-now-button {
+    background-color: #42a621;
+    padding: 10px 24px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.upcoming-event-webinar-card {
+    background-image: linear-gradient(to right, #16479b, #117cad);
+    height: 250px;
+    border-radius: 10px;
+}
+
+.upcoming-event-bfsi-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.upcoming-event-bfsi-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px; 
+    height: 40px; 
+    background-color: #16479b;
+    border-radius: 0px 0px 10px;
+}
+
+.upcoming-event-about-webinar-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.upcoming-event-about-webinar-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px; 
+    height: 40px; 
+    background-color: #16479b;
+    border-radius: 0px 0px 10px;
+}
+
+.bank-icon {
+    color: #16479b;
+}
+
+i {
+    font-size: 28px;
+}
+
+.blue-icons {
+    color: #16479b;
+}
+
+/* Key points for discussion section styles */
+
+.key-points-and-who-is-it-for-image {
+    height: 320px;
+    width: 320px;
+    border-radius: 300px;
+}
+
+.text-hr {
+    width: 100px;
+    border: solid 2px #16479b;
+}
+
+/* Section that has registration form styles */
+
+.registration-form-container {
+    background-color: #f6f7fb;
+}
+
+.registration-form {
+    background-color: white;
+    padding: 26px;
+    border-radius: 10px;
+}
+
+.form-floating .form-control {
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 0;
+    outline: none;
+}
+
+.form-floating .form-control:focus {
+    border-bottom-color: #16479b;
+    box-shadow: none;
+    outline: none; 
+}
+
+.form-floating label {
+    color: #999;
+    transition: all 0.3s;
+}
+
+.form-check-label {
+    font-size: 14px;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #16479b;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 6px;
+    outline: none;
+    border: none;
+}
+
+.blue-arrow-container {
+    display: none;
+}
+
+/* Contact us for all cybersecurity section styles */
+
+.contact-container {
+    background-image: url(images/contact-section-image.webp);
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.click-here-button {
+    background-color: #2b487e;
+    color: white;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Footer styles */
+
+.footer-container {
+    background-color: #f6f7fb;
+}
+
+.footer-section {
+    padding: 20px;
+}
+
+.footer-section h5 {
+    color: #16479b;
+}
+.footer-section a {
+    color: #5a5858;
+    text-decoration: none;
+}
+
+.footer-location-container {
+    background-color: #e8f0fa;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0px 30px 0px 30px;
+}
+
+.footer-icons {
+    background-color: white;
+    color: #2b487e;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.footer-horizontal-rule {
+    border: solid 2px £5a5858;
+}
+
+.footer-location-container h5, h6 {
+    color: #16479b;
+}
+
+
+@media screen and (min-width: 768px) {
+    .blue-arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: -120px;
+    }
+
+    .blue-arrow-container img {
+        height: 300px;
+    }
+}
+
+

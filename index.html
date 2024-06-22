@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kratikal Assignment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Header Section -->
+    <header class="top-header d-none d-md-block">
+      <div class="container d-flex justify-content-end align-items-center">
+        <img src="images/us-flag.png" alt="US Flag" class="us-flag-image" />
+        <span class="contact-number">Call Us: (+1) 323 287 9435</span>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.webp" alt="Brand Logo" class="logo-image" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#solutions">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tools">Free Tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#partner">Partner</a>
+            </li>
+            <li class="nav-item" href="pricing">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="d-none d-md-block">
+              <a class="nav-link" href="#">
+                <i class="bi bi-search search-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" id="contactUsBtn"
+                ><buttton class="contact-us-button">Contact Us</buttton></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Upcoming events -->
+    <section class="upcoming-event mt-5">
+      <div class="container">
+        <!--  Upcoming events section 1 -->
+        <div class="d-flex flex-column flex-md-row align-items-center w-100">
+          <div class="mb-4 mb-md-0 me-md-4 w-100 w-md-50">
+            <h5 class="text-muted fw-bold mb-4">Upcoming Event</h5>
+            <h2 class="fw-bold mb-4">Social Engineering for BSFI Sector</h2>
+            <h5 class="text-muted fw-bold mb-4">Ongoing and CyberFuture</h5>
+            <div
+              id="countdown"
+              class="countdown-container p-3 mb-4 shadow-lg d-flex align-items-center justify-content-around"
+            >
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="days" class="fw-bold">00</h3>
+                <p>Days</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="hours" class="fw-bold">00</h3>
+                <p>Hours</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="minutes" class="fw-bold">00</h3>
+                <p>Minutes</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="seconds" class="fw-bold">00</h3>
+                <p>Seconds</p>
+              </div>
+            </div>
+            <button class="register-now-button mb-3" onclick="scrollToForm()">Register Now</button>
+          </div>
+          <div class="w-100 w-md-50">
+            <img
+              src="images/upcoming-event-image.png"
+              alt="Upcoming Event"
+              class="upcoming-event-one-image img-fluid"
+            />
+          </div>
+        </div>
+        <!-- Upcoming events section 2 -->
+        <div class="d-flex flex-column flex-md-row align-items-center w-100">
+          <div
+            class="d-flex align-items-center justify-content-between mb-md-0 me-md-4 w-100"
+          >
+            <div
+              class="upcoming-event-webinar-card d-flex flex-column align-items-center justify-content-center shadow-lg w-50 me-md-2 p-2"
+            >
+              <i class="bi bi-calendar-week text-white"></i>
+              <h4 class="fw-bold text-white text-center">Webinar Time</h4>
+              <p id="current-date" class="text-white text-center"></p>
+              <p id="current-time" class="text-white text-center"></p>
+            </div>
+            <div
+              class="upcoming-event-bfsi-card d-flex flex-column align-items-center justify-content-center shadow-lg w-50 ms-2 p-2"
+            >
+              <i class="bi bi-bag-check-fill blue-icons"></i>
+              <h4 class="fw-bold text-dark text-center">BFSI<br />Sector</h4>
+            </div>
+          </div>
+          <div class="w-100 w-md-50">
+            <div
+              class="upcoming-event-about-webinar-card d-flex flex-column align-items-center justify-content-center shadow-lg mt-3 mt-md-0p-2"
+            >
+              <div class="d-flex align-self-start">
+                <i class="bi bi-bar-chart-fill blue-icons ms-2 me-md-3"></i>
+                <h4 class="fw-bold text-dark mt-2">About the Webinar</h4>
+              </div>
+              <div class="ms-5">
+                <p class="text-muted">
+                  The webinar will delve into the intricacies of teh BFSI
+                  (Banking, Financial Services and Insurance) sector's
+                  cybersecurity landscape in Saudi Arabia, exploring both the
+                  current challenges and the future threates that lie ahead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Points Section -->
+    <section class="mt-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+          <div class="me-md-3">
+            <h4 class="fw-bold text-dark">The Key Points of Discussion -</h4>
+            <hr class="text-hr"/>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Analysis
+              of recent cyber threats and attacks targeting banks and financial
+              instituions in Saudi Arabia.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Overview
+              of the existing regulatory framework and cybersecurity guidelines
+              for BSFI companies in Saudi Arabia.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Discussion
+              on the potential cybersecurity risks associated with the adoption
+              of emering technologies.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Real-world
+              examples of effective incident response and recovery in the
+              aftermath of cyber incidents.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Strategies
+              for developing a powerful cybersecurity workforce through
+              training, education and certifications.
+            </p>
+          </div>
+          <div class="w-100 w-md-50 text-center">
+            <img
+              src="images/key-points-image.webp"
+              class="key-points-and-who-is-it-for-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who is it for Section -->
+    <section class="mt-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+          <div class="w-100 w-md-50 text-center order-2 order-md-1">
+            <img
+              src="images/who-is-it-for-image.webp"
+              class="img-fluid key-points-and-who-is-it-for-image"
+            />
+          </div>
+          <div class="order-1 order-md-2">
+            <h4 class="fw-bold text-dark">Who is it for?</h4>
+            <hr class="text-hr" />
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Analysis
+              of recent cyber threats and attacks targeting banks and financial
+              instituions in Saudi Arabia.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Overview
+              of the existing regulatory framework and cybersecurity guidelines
+              for BSFI companies in Saudi Arabia.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Discussion
+              on the potential cybersecurity risks associated with the adoption
+              of emering technologies.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Real-world
+              examples of effective incident response and recovery in the
+              aftermath of cyber incidents.
+            </p>
+            <p class="text-muted">
+              <span><i class="bi bi-check blue-icons me-2"></i></span>Strategies
+              for developing a powerful cybersecurity workforce through
+              training, education and certifications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration form Section -->
+    <section class="registration-form-container mt-5">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-5 pb-5"
+        >
+          <div class="me-0 me-md-3">
+            <h4 class="fw-bold text-dark">
+              Don't miss this opportunity and the guidance you need to implement
+              for a healthy cyberspace
+            </h4>
+            <p class="text-muted">
+              Want the Guest Speaker to Anwer some of your Questions?
+            </p>
+            <div class="blue-arrow-container">
+              <img src="images/blue-arrow.svg" alt="arrow" class="img-fluid" />
+            </div>
+            <div
+              id="bottomCountdown"
+              class="countdown-container bg-white p-3 mb-4 shadow-lg d-flex align-items-center justify-content-around"
+            >
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="bottomDays" class="fw-bold">00</h3>
+                <p>Days</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="bottomHours" class="fw-bold">00</h3>
+                <p>Hours</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="bottomMinutes" class="fw-bold">00</h3>
+                <p>Minutes</p>
+              </div>
+              <div class="colon">:</div>
+              <div class="countdown-item d-flex flex-column align-items-center">
+                <h3 id="bottomSeconds" class="fw-bold">00</h3>
+                <p>Seconds</p>
+              </div>
+            </div>
+        </div>
+          <div class="w-100 w-md-50">
+            <form
+              id="registrationForm"
+              class="registration-form shadow-lg"
+              novalidate
+            >
+              <h4 class="fw-bold text-dark">Registration Now!</h4>
+              <div class="form-floating mb-1">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  placeholder="Full Name"
+                  required
+                />
+                <label for="fullName">Full Name</label>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="workEmail"
+                  placeholder="Work Email"
+                  required
+                />
+                <label for="workEmail">Work Email</label>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  placeholder="Phone Number"
+                  required
+                />
+                <label for="phoneNumber">Phone Number</label>
+                <div class="invalid-feedback">
+                  Please enter your phone number.
+                </div>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="companyName"
+                  placeholder="Company Name"
+                  required
+                />
+                <label for="companyName">Company Name</label>
+                <div class="invalid-feedback">
+                  Please enter your company name.
+                </div>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="designation"
+                  placeholder="Designation"
+                  required
+                />
+                <label for="designation">Designation</label>
+                <div class="invalid-feedback">
+                  Please enter your designation.
+                </div>
+              </div>
+              <div class="form-floating mb-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numEmployees"
+                  placeholder="Designation"
+                  required
+                />
+                <label for="numEmployees">Number of Employees</label>
+                <div class="invalid-feedback">
+                  Please enter the number of employees.
+                </div>
+              </div>
+              <div class="form-check mb-1">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="subscribe"
+                  required
+                />
+                <label for="subscribe" class="form-check-label"
+                  >Subscribe to our Weekly Newsletter to stay updated!</label
+                >
+              </div>
+              <button type="submit" class="submit-button">SUBMIT</button>
+            </form>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between"
+        >
+          <h4 class="fw-bold text-white">
+            Contact Us for All cybersecurity Needs
+          </h4>
+          <button class="click-here-button">Click Here</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-container">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-start justify-content-md-between pt-2 pb-2"
+        >
+          <div class="footer-section">
+            <h5>Products</h5>
+            <ul class="list-unstyled">
+              <li class="mb-1"><a href="#">TSAT</a></li>
+              <li class="mb-1"><a href="#">TDMARC</a></li>
+              <li><a href="#">TPIR</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Services</h5>
+            <ul class="list-unstyled">
+              <li class="mb-1"><a href="#">VAPT Services</a></li>
+              <li class="mb-1"><a href="#">Compliance</a></li>
+              <li class="mb-1"><h5>Pricing</h5></li>
+              <li><a href="#">Get a Quote</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Resources</h5>
+            <ul class="list-unstyled">
+              <li class="mb-1"><a href="#">Blog</a></li>
+              <li class="mb-1"><a href="#">Newsletter</a></li>
+              <li class="mb-1"><a href="#">Case Study</a></li>
+              <li><a href="#">Cyber Jagrookta Diwas</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li class="mb-1"><a href="#">About us</a></li>
+              <li class="mb-1"><a href="#">Customers</a></li>
+              <li class="mb-1"><a href="#">Partners</a></li>
+              <li class="mb-1"><a href="#">Contact Us</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-location-container">
+              <h5>Locations</h5>
+              <h6>UNITED STATES</h6>
+              <p class="text-muted">400 W Peachtree St NW Atlanta, GA, 30308</p>
+              <h5>Contact Details</h5>
+              <h6>FOR SALES</h6>
+              <p class="text-muted">sales@threatcop.com</p>
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/us-flag.png"
+                  alt="US Flag"
+                  class="us-flag-image"
+                />
+                <span class="text-muted">Call Us: (+1) 323 287 9435</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-end">
+                <i class="bi bi-instagram footer-icons shadow-lg me-2"></i>
+                <i class="bi bi-twitter footer-icons shadow-lg"></i>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-horizontal-rule"/>
+        <div class="d-flex flex-column flex-md-row align-items-center align-items-center justify-content-start justify-content-md-between p-2">
+            <p class="text-muted">Copyright &copy; 2022 Kratikal Tech Pvt. Ltd.</p>
+            <a href="#" class="text-decoration-none text-muted">Privacy Note</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Contact Us -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm" novalidate> 
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="contactName" required>
+              <div class="invalid-feedback">Please enter your name.</div> 
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div> 
+            </div>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="3" required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div> 
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitContactForm">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Success Message -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>We have received your message. We will get back to you soon.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
