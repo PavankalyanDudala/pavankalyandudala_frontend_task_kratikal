@@ -132,8 +132,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Bootstrap modals
-    var contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
-    var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    let contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+    let successModal = new bootstrap.Modal(document.getElementById('successModal'));
   
     // Handle click events for Contact Us button
     document.getElementById('contactUsBtn').addEventListener('click', function (e) {
@@ -150,9 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle form submission
     document.getElementById('submitContactForm').addEventListener('click', function () {
       if (document.getElementById('contactForm').checkValidity()) {
-        var contactName = document.getElementById('contactName').value;
-        var contactEmail = document.getElementById('contactEmail').value;
-        var contactMessage = document.getElementById('contactMessage').value;
+        let contactName = document.getElementById('contactName').value;
+        let contactEmail = document.getElementById('contactEmail').value;
+        let contactMessage = document.getElementById('contactMessage').value;
 
         successModal.show();
         contactModal.hide();
